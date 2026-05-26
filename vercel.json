@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/building-t-bird-heights", "destination": "/about", "permanent": true },
+    { "source": "/unit-pictures",            "destination": "/gallery", "permanent": true },
+    { "source": "/contact-us",               "destination": "/contact", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

@@ -1,28 +1,27 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import AvailabilityBanner from './components/AvailabilityBanner'
-import Features from './components/Features'
-import Gallery from './components/Gallery'
-import Pricing from './components/Pricing'
-import Location from './components/Location'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import GalleryPage from './pages/GalleryPage'
+import ContactPage from './pages/ContactPage'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <main>
-        <section id="home"><Hero /></section>
-        <AvailabilityBanner />
-        <section id="features"><Features /></section>
-        <section id="gallery"><Gallery /></section>
-        <section id="pricing"><Pricing /></section>
-        <section id="location"><Location /></section>
-        <section id="contact"><Contact /></section>
+        <Routes>
+          <Route path="/"        element={<Home />} />
+          <Route path="/about"   element={<About />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*"        element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 

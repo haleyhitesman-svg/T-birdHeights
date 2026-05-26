@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -13,24 +15,22 @@ export default function Footer() {
               built around the way you actually live.
             </p>
             <p className="footer-address">
-              354 S 300 W<br />
-              Cedar City, UT 84720
+              354 S 300 W<br />Cedar City, UT 84720
             </p>
           </div>
 
           <div>
             <div className="footer-col-title">Quick Links</div>
-            <a href="#features" className="footer-col-link">Features</a>
-            <a href="#gallery" className="footer-col-link">Photo Gallery</a>
-            <a href="#pricing" className="footer-col-link">Pricing</a>
-            <a href="#location" className="footer-col-link">Location</a>
-            <a href="#contact" className="footer-col-link">Contact</a>
+            <Link to="/"        className="footer-col-link">Home</Link>
+            <Link to="/about"   className="footer-col-link">The Unit</Link>
+            <Link to="/gallery" className="footer-col-link">Photo Gallery</Link>
+            <Link to="/contact" className="footer-col-link">Contact</Link>
           </div>
 
           <div>
             <div className="footer-col-title">Contact</div>
-            <a href="tel:4352630677" className="footer-col-link">(435) 263-0677</a>
-            <a href="mailto:pm@stratumrealestate.com" className="footer-col-link">pm@stratumrealestate.com</a>
+            <a href="tel:4352630677"                    className="footer-col-link">(435) 263-0677</a>
+            <a href="mailto:pm@stratumrealestate.com"   className="footer-col-link">pm@stratumrealestate.com</a>
             <p className="footer-col-link" style={{ cursor: 'default' }}>
               365 S Main St<br />Cedar City, UT 84720
             </p>
