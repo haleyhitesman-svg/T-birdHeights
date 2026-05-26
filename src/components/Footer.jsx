@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-inner">
           <div>
             <div className="footer-brand-logo">
-              <img src="/TBirdHeights.png" alt="T-Bird Heights" style={{ height: 44, width: 'auto', filter: 'brightness(0) invert(1)' }} />
+              <img src="/TBirdHeights.png" alt="T-Bird Heights" style={{ height: 44, width: 'auto' }} />
               <span className="footer-brand-name">T-Bird Heights</span>
             </div>
             <p className="footer-tagline">
