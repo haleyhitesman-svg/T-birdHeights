@@ -1,25 +1,29 @@
-// To add real photos: place your images in /public/images/ and update the `src` values below.
-// Example: src="/images/bedroom-1.jpg"
-// The first slot (Exterior) spans 2 columns and looks best as a wide landscape shot.
+// Photos are served from /public/images/
+// Note: "Shower/Bath.jpg" must be renamed to "Shower-Bath.jpg" before adding to the folder.
 
 const photos = [
-  { label: 'Exterior', src: null },
-  { label: 'Bedroom', src: null },
-  { label: 'Private Bathroom', src: null },
-  { label: 'Shared Kitchen', src: null },
-  { label: 'Living Room', src: null },
-  { label: 'Furnished Room', src: null },
+  // Hero wide shot — spans 2 columns
+  { src: '/images/Outside-View.jpg',    label: 'Exterior' },
+  // Regular grid
+  { src: '/images/Living%20Room.jpg',   label: 'Living Room' },
+  { src: '/images/Tv-LivingRoom.jpg',   label: 'Living Room' },
+  { src: '/images/Kitchen-1.jpg',       label: 'Kitchen' },
+  { src: '/images/Kitchen-2.jpg',       label: 'Kitchen' },
+  { src: '/images/Bedroom-1.jpg',       label: 'Bedroom' },
+  { src: '/images/Bedroom-2.jpg',       label: 'Bedroom' },
+  { src: '/images/Bedroom-3.jpg',       label: 'Bedroom' },
+  { src: '/images/Bathroom-1.jpg',      label: 'Private Bathroom' },
+  { src: '/images/Bathroom-2.jpg',      label: 'Private Bathroom' },
+  { src: '/images/Shower-Bath.jpg',     label: 'Shower & Bath' },
+  { src: '/images/BathroomVanity.jpg',  label: 'Bathroom Vanity' },
+  { src: '/images/BathroomStorage.jpg', label: 'Bathroom Storage' },
+  { src: '/images/DownStairs1.jpg',     label: 'Downstairs' },
+  { src: '/images/DownStairs2.jpg',     label: 'Downstairs' },
+  { src: '/images/UpStairs.jpg',        label: 'Upstairs' },
+  { src: '/images/OutsideDeck.jpg',     label: 'Outdoor Deck' },
+  { src: '/images/Outside-View2.jpg',   label: 'Exterior' },
+  { src: '/images/Outside-View3.jpg',   label: 'Exterior' },
 ]
-
-function PlaceholderIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="3" width="18" height="18" rx="2"/>
-      <circle cx="8.5" cy="8.5" r="1.5"/>
-      <polyline points="21 15 16 10 5 21"/>
-    </svg>
-  )
-}
 
 export default function Gallery() {
   return (
@@ -36,19 +40,10 @@ export default function Gallery() {
         <div className="gallery-grid">
           {photos.map((photo, i) => (
             <div key={i} className="gallery-item">
-              {photo.src ? (
-                <>
-                  <img src={photo.src} alt={photo.label} />
-                  <div className="gallery-overlay">
-                    <span className="gallery-overlay-label">{photo.label}</span>
-                  </div>
-                </>
-              ) : (
-                <div className="gallery-placeholder">
-                  <PlaceholderIcon />
-                  <span className="gallery-placeholder-label">{photo.label}</span>
-                </div>
-              )}
+              <img src={photo.src} alt={photo.label} />
+              <div className="gallery-overlay">
+                <span className="gallery-overlay-label">{photo.label}</span>
+              </div>
             </div>
           ))}
         </div>
