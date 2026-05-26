@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="container">
         <div className="navbar-inner">
           <Link to="/" className="navbar-logo">
-            <div className="navbar-logo-icon">T</div>
+            <img src="/TBirdHeights.png" alt="T-Bird Heights" style={{ height: 40, width: 'auto', display: 'block' }} />
             <span className="navbar-logo-text">T-Bird Heights</span>
           </Link>
 
